@@ -1,0 +1,33 @@
+code = """
+// Prueba de printf con códigos de escape
+printf("Hola\\nMundo\\tCon\\tTabulacion");
+
+// Prueba de operadores ++ y -- en sus formas prefijas y postfijas
+int a = 5;
+int b = a++;    // b = 5, a = 6 (postfijo)
+int c = ++a;    // c = 7, a = 7 (prefijo)
+int d = a--;    // d = 7, a = 6 (postfijo)
+int e = --a;    // e = 5, a = 5 (prefijo)
+printf("Valores: b=%d, c=%d, d=%d, e=%d\\n", b, c, d, e);
+
+// Prueba de operadores de asignación compuesta
+int x = 10;
+x += 5;    // x = 15
+x -= 3;    // x = 12
+x *= 2;    // x = 24
+x /= 4;    // x = 6
+printf("Resultado de x: %d\\n", x);
+
+// Prueba de evaluación de circuito-corto
+int y = 0;
+int z = 10;
+int res1 = (y != 0) && (z /= y);  // res1 = 0 (corto-circuito)
+int res2 = (y == 0) || (z /= 2);  // res2 = 1, z = 5 (corto-circuito)
+printf("Resultado de z: %d, res1: %d, res2: %d\\n", z, res1, res2);
+
+// Prueba de valor NULL
+int* p = NULL;
+if (p == NULL) {
+    printf("Puntero es NULL\\n");
+}
+"""
